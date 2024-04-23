@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
+import 'models/cart.dart';
 import 'pages/intro_page.dart';
 
 void main() {
@@ -16,9 +17,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Intro(),
-    );
+    return ChangeNotifierProvider(
+        create: (context) => Cart(),
+        builder: (context, child) => MaterialApp(
+              debugShowCheckedModeBanner: false,
+              home: Intro(),
+            ));
   }
 }

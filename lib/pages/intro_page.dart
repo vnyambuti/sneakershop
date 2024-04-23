@@ -22,10 +22,13 @@ class Intro extends StatelessWidget {
           SizedBox(
             height: 48,
           ),
-          Text(
-            "Brand new and Affordable  sneakers made with quality materials",
-            style: TextStyle(color: Colors.grey),
-            textAlign: TextAlign.center,
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Text(
+              "Brand new and Affordable  sneakers made with quality materials",
+              style: TextStyle(color: Colors.grey),
+              textAlign: TextAlign.center,
+            ),
           ),
           SizedBox(
             height: 25,
